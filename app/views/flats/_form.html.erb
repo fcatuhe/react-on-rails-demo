@@ -1,0 +1,47 @@
+<%= form_with(model: flat, local: true) do |form| %>
+  <% if flat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(flat.errors.count, "error") %> prohibited this flat from being saved:</h2>
+
+      <ul>
+      <% flat.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :flat_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_url %>
+    <%= form.text_field :image_url, id: :flat_image_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price, id: :flat_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price_currency %>
+    <%= form.text_field :price_currency, id: :flat_price_currency %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lat %>
+    <%= form.text_field :lat, id: :flat_lat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lng %>
+    <%= form.text_field :lng, id: :flat_lng %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

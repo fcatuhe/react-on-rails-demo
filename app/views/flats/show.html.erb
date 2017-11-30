@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @flat.name %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @flat.image_url %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @flat.price %>
+</p>
+
+<p>
+  <strong>Price currency:</strong>
+  <%= @flat.price_currency %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @flat.lat %>
+</p>
+
+<p>
+  <strong>Lng:</strong>
+  <%= @flat.lng %>
+</p>
+
+<%= link_to 'Edit', edit_flat_path(@flat) %> |
+<%= link_to 'Back', flats_path %>

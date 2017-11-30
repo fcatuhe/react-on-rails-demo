@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Flats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Image url</th>
+      <th>Price</th>
+      <th>Price currency</th>
+      <th>Lat</th>
+      <th>Lng</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @flats.each do |flat| %>
+      <tr>
+        <td><%= flat.name %></td>
+        <td><%= flat.image_url %></td>
+        <td><%= flat.price %></td>
+        <td><%= flat.price_currency %></td>
+        <td><%= flat.lat %></td>
+        <td><%= flat.lng %></td>
+        <td><%= link_to 'Show', flat %></td>
+        <td><%= link_to 'Edit', edit_flat_path(flat) %></td>
+        <td><%= link_to 'Destroy', flat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Flat', new_flat_path %>
