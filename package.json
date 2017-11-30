@@ -8,7 +8,8 @@
     "google-map-react": "^0.25.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-on-rails": "^10.0.2"
   },
   "devDependencies": {
     "webpack-dev-server": "^2.9.5"

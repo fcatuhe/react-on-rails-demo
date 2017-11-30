@@ -8,26 +8,15 @@ import './App.css';
 class App extends Component {
   constructor(props) {
     super(props);
+
+    const { flats } = props;
+
     this.state = {
-      flats: [],
-      allFlats: [],
-      selectedFlat: null,
+      flats,
+      allFlats: flats,
+      selectedFlat: flats[0],
       search: ''
     };
-  }
-
-  componentDidMount() {
-    fetch(
-      'https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/flats.json'
-    )
-      .then(response => response.json())
-      .then(data => {
-        this.setState({
-          allFlats: data,
-          flats: data,
-          selectedFlat: data[0]
-        });
-      });
   }
 
   selectFlat = flat => {

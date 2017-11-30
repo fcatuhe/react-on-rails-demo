@@ -5,6 +5,11 @@ class FlatsController < ApplicationController
   # GET /flats.json
   def index
     @flats = Flat.all
+
+    flats = @flats.map do |flat|
+      flat.as_json.transform_keys { |key| key.camelize(:lower) }
+    end
+    @flats_props = { flats: flats }
   end
 
   # GET /flats/1

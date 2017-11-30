@@ -2,9 +2,9 @@
 
 <h1>Flats</h1>
 
-<div id="flats"></div>
-<%= javascript_pack_tag 'flats' %>
-<%= stylesheet_pack_tag 'flats' %>
+<%= react_component("Flats", props: @flats_props, prerender: true) %>
+<%= javascript_pack_tag 'flats-bundle' %>
+<%= stylesheet_pack_tag 'flats-bundle' %>
 
 <table>
   <thead>
